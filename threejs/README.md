@@ -54,7 +54,7 @@ renderer.render(scene, camera);
 ```
 
 ### Geometry
-For shape, you’ll either want to define a geometry within Three.js or import one from a file. Here we will use common shapes by using Geometry function. Geometric object allows various parameters including radius, width, height. We use [SphereGeometry](https://threejs.org/docs/#api/en/geometries/SphereGeometry) to generate sphere.
+For shape, you’ll either want to define a geometry within Three.js or import one from a file. Here we will use common shapes by using Geometry function. Geometric object allows various parameters including radius, width, height. In this example, we use [SphereGeometry](https://threejs.org/docs/#api/en/geometries/SphereGeometry) to generate sphere.
 
 ### Material
 Three.js comes with 17 mesh materials, each with its own advantages and customisable properties. We use [MashBasicMaterial](https://threejs.org/docs/#api/en/materials/MeshBasicMaterial) here, a material for drawing geometries in a simple shaded (flat or wireframe) way. This material is not affected by lights.
