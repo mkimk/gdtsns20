@@ -72,7 +72,7 @@ You can also import geometries, textures, and other materials. Three.js has a li
 
 
 
-## More Resources
+## Resources
 - [Three.js Fundamentals](https://threejsfundamentals.org/)
 - [Three.js Chrome DevTool](https://chrome.google.com/webstore/detail/threejs-developer-tools/ebpnegggocnnhleeicgljbedjkganaek)
 - [Material and Light Basics in three.js](http://blog.disignstudio.com/materials-and-light-basics-in-three-js/)
