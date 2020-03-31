@@ -54,13 +54,13 @@ renderer.render(scene, camera);
 ```
 
 ### Geomtry
-For shape, you’ll either want to define a geometry within Three.js or import one from a file. Here we will use common shapes by using Geometry function. Geometric object allows various parameters including radius, width, height.
+For shape, you’ll either want to define a geometry within Three.js or import one from a file. Here we will use common shapes by using Geometry function. Geometric object allows various parameters including radius, width, height. We use [SphereGeometry](https://threejs.org/docs/#api/en/geometries/SphereGeometry) to generate sphere.
 
 ### Material
-Three.js comes with 17 mesh materials, each with its own advantages and customisable properties. 
+Three.js comes with 17 mesh materials, each with its own advantages and customisable properties. We use [MashBasicMaterial](https://threejs.org/docs/#api/en/materials/MeshBasicMaterial) here, a material for drawing geometries in a simple shaded (flat or wireframe) way. This material is not affected by lights.
 
 ## Light
-You can also craft your scene by using light. Depending on which material you use, lights are an essential part of a scene. There are several other kinds of lights you can add to a scene.
+You can also craft your scene by using light. Depending on the material you use, lights are an essential part of a scene. There are several other kinds of lights you can add to a scene. [PointLight](https://threejs.org/docs/#api/en/lights/PointLight) is located at a point in space and sends light out in all directions equally. A common use case for this is to replicate the light emitted from a bare lightbulb. This light can cast shadows.
 
 
 ```
