@@ -40,7 +40,7 @@ renderer.setSize(width, height); // set the size of the renderer
 document.body.appendChild(renderer.domElement);  // render the canvas to the html document
 ```
 
-## Object (Geometry + Material)
+## Object 
 In Three.js, the basic visual element in a scene is a Mesh. It consists of Geometry(defines its shape) and Material (defines its skin). 
 ```
 // define shape and skin of an object
