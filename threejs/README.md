@@ -4,11 +4,11 @@
 
 [threejs.org](https://threejs.org)
 
-Three.js is a easy, lightweight Javascript 3D Library to get 3D content on a webpage by using WebGL. WebGL is a JavaScript API for rendering interactive 3D and 2D graphics within a web browser on a <canvas> element.
+Three.js is a easy, lightweight Javascript Library to get 3D content on a webpage by using WebGL. WebGL is a JavaScript API for rendering interactive 3D and 2D graphics within a web browser on a <canvas> element.
 
 
 ## Setup
-The basic setup to create three.js prorject is a scene, camera, and renderer.
+The basic setup to create a three.js prorject is *scene*, *camera*, and *renderer*.
 
 
 ## Scene
