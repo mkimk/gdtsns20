@@ -43,7 +43,7 @@ document.body.appendChild(renderer.domElement);  // render the canvas to the htm
 ## Object 
 In Three.js, the basic visual element in a scene is a Mesh. It consists of Geometry(defines its shape) and Material (defines its skin). 
 ```
-// define shape and skin of an object
+// define geometry and material of an object
 var geometry = new THREE.SphereGeometry(radius : Float, widthSegments : Integer, heightSegments : Integer);
 var material = new THREE.MeshBasicMaterial(parameters : Object); 
 
@@ -53,7 +53,7 @@ scene.add(myobject);
 renderer.render(scene, camera);
 ```
 
-### Geomtry
+### Geometry
 For shape, you’ll either want to define a geometry within Three.js or import one from a file. Here we will use common shapes by using Geometry function. Geometric object allows various parameters including radius, width, height. We use [SphereGeometry](https://threejs.org/docs/#api/en/geometries/SphereGeometry) to generate sphere.
 
 ### Material
