@@ -192,7 +192,7 @@ More read 👉
 
 
 ### API Query with User Input
-Based on the query string, we can disperse the api url and query the data with user interraction by using variables.Below example shows how to change the output when user enters a data.
+Based on the query string, we can divide the api url into static url and variables, and then query the data with user interraction by using the variables. Below example shows how to change the output when user enters a data.
 
 ```js
 var weatherData;
