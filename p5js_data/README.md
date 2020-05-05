@@ -116,7 +116,7 @@ However, JSON can be easily builky and complex to load a length of data. In this
 ```
 
 ##### Preload
-Calling `loadJSON()` inside `preload()` guarantees to complete the operation before setup() and draw() are called.
+Calling `loadJSON()` inside `preload()` guarantees to complete the operation before `setup()` and `draw()` are called.
 
 ```js
 var color;
@@ -178,10 +178,8 @@ function draw() {
 ## API
 Data is usually loaded as an external file or request it from an API. API stands for *Application Programming Interface*, it is a set of routines, protocols, and tools for building software applications. You can think API as a messenger that tells requests and tells a system what you want to do, and returns the response back.
 
-## How to use API
-
 ### Query String
-The question mark followed by the parameters and their values is referred to as the “query string". It assigns a parameter of data by querying a specific condition. In the query string, each parameter is listed one right after the other with an ampersand (`&`) separating them. The order of the query string parameters does not matter. You can see examples here 👉[Open Weather Map API calls](https://openweathermap.org/current)
+The question mark followed by the parameters and their values is referred to as the [query string]("https://en.wikipedia.org/wiki/Query_string"). It assigns a parameter of data by querying a specific condition. In the query string, each parameter is listed one right after the other with an ampersand (`&`) separating them. The order of the query string parameters does not matter. You can see examples here 👉[Open Weather Map API calls](https://openweathermap.org/current)
 
 *To review JSON file on browser, [JSON formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en) plugin is useful.
 
@@ -191,7 +189,38 @@ More read 👉
 
 
 ### API Query with User Input
+Based on the query string, we can disperse the api url and query the data with user interraction by using variables.Below example shows how to change the output when user enters a data.
 
+```js
+var weatherData;
+var api = "https://api.openweathermap.org/data/2.5/weather?q=";
+var apiKey = "&appid=da41b776483f6b58fc0dc17d649e9ab1";
+var input;
+var button;
+function setup() {
+    createCanvas(600,600);
+    input = createInput('city');
+    button = createButton('submit');
+    button.mousePressed(getNewWeather);
+}
+
+function gotData(data) {
+    weatherData = data;
+}
+function getNewWeather() {
+    var url = api + input.value() + apiKey;
+    loadJSON(url, gotData, 'jsonp');
+}
+
+function draw() {
+    background(0);
+    fill(255);
+    if (weatherData) {
+        console.log(weatherData);
+        circle(300, 300, weatherData.main.temp);
+    }
+}
+```
 
 
 
