@@ -48,6 +48,7 @@ Basic JSON file is a **string** like the following, with the quotations around t
 }
 ```
 All property names have to be surrounded by double quotes, and only simple data expressions are allowed. No function calls, bindings, or anything that involves actual computation. Comments are not allowed in JSON.
+* More read on data types 👉[CodeLab session3 slide](https://docs.google.com/presentation/d/1Sj5Cb_e4d3axEdMtFBGxQj-OiRFIZie4Om1kbvo5fjk/edit?usp=sharing)
 
 JSON can have more than one object, and also lets you create nested arrays.
 ```js
