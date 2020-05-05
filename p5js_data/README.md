@@ -83,6 +83,7 @@ If the property name is an array, use the number of index we are looking for. Th
 
 ### How to use JSON data in your p5.js project
 
+#### Internal
 If you have json string is short enough, you can directly implement JSON and use it by calling the strings.
 
 ```js
@@ -103,7 +104,7 @@ function draw() {
 }
 ```
 
-#### Make a separate JSON and connect it your p5.js
+#### External
 However, JSON can be easily builky and complex to load a length of data. In this case, JSON can be loaded into your project as a stand alone file. The difference is, there is no variable in this file. It is just an object that starts with the curly brackets.  
 ```js
  {
@@ -114,7 +115,7 @@ However, JSON can be easily builky and complex to load a length of data. In this
 }
 ```
 
-#### Preload
+##### Preload
 Calling `loadJSON()` inside `preload()` guarantees to complete the operation before setup() and draw() are called.
 
 ```js
@@ -132,7 +133,7 @@ function draw() {
 }
 ```
 
-#### Callback
+##### Callback
 Besides of the preload, we can also use callback function. This is useful when you want to load the data over time. 
 
 Basic structure:
