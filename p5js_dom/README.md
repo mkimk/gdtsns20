@@ -41,7 +41,7 @@ P5.js is a Javascript library based on Processing. One of the core reasons why p
 
 
 #### CallBack
-```
+```js
 function setup {
     var button = createButton(); //create a button
     button.mousePressed('changeColor'); //call back a function
@@ -65,7 +65,7 @@ function changeColor { //definition of the function
 
 
 #### How to style CSS in p5.js
-```
+```js
 style(name of the property, style of the property);
 ```
 
