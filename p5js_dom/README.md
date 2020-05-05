@@ -75,6 +75,7 @@ style(name of the property, style of the property);
 
 
 ## Other Resources
+- [Eloquent JavaScript: The Document Object Model](https://eloquentjavascript.net/14_dom.html)
 - [p5.js Reference > p5.Element](https://p5js.org/reference/#/p5.Element)
 - [Reference for All DOM Events](https://developer.mozilla.org/en-US/docs/Web/Events)
 - [Coding Train: 8: HTML / CSS / DOM](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX)
