@@ -40,7 +40,7 @@ There are a few data formats that are standardized for computer to read.
 Basic JSON file is a **string** like the following, with the quotations around the brackets.
 
 ```js
-var color = {
+{
     "name" : "mycolor",
     "r": "255",
     "g": "0",
@@ -51,17 +51,17 @@ All property names have to be surrounded by double quotes, and only simple data 
 
 JSON can have more than one object, and also lets you create nested arrays.
 ```js
-var data = {
-  myshape [
-      { shape: circle, 
-        r: 0,
-        g: 255,
-        b: 0 
+{
+  "myshape" [
+      { "shape": "circle", 
+        "r": 0,
+        "g": 255,
+        "b": 0 
       },
-      { shape: square, 
-          r: 255,
-          g: 0,
-          b: 0 
+      { "shape": "square", 
+        "r": 255,
+        "g": 0,
+        "b": 0 
       },
   ]
 }
@@ -70,16 +70,16 @@ var data = {
 ### Data path
 To use JSON data for your project, we need to figure out a path to get into this JSON objects. In order to access any of the values, we will use dot notation that looks like below. The variable name is first, followed by a dot, followed by the key to be accessed.
 ```js
-  color.r //255
-  color.g //0
-  color.b //0
+  [variable name].r //255
+  [variable name].g //0
+  [variable name].b //0
 ```
 
 #### Accessing Array items
 If the property name is an array, use the number of index we are looking for. The order of an item in an array is called an index. Think of it as a numerical label. The position number starts at 0 (not 1.). In JS, we can call that item in the array within the context of dot notation like below:
 ```js
-  data.myshape[0].r //0
-  data.myshape[1].shape //square
+  [variable name].myshape[0].r //0
+  [variable name].myshape[1].shape //square
 ```
 
 
@@ -123,7 +123,7 @@ Calling `loadJSON()` inside `preload()` guarantees to complete the operation bef
 ```js
 var color;
 function preload() {
-  color = loadJSON("color.json");
+  color = loadJSON('./common/color.json');
 }
 function setup() {
   createCanvas(200,200);
