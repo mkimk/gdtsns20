@@ -63,7 +63,7 @@ JSON can have more than one object, and also lets you create nested arrays.
         "r": 255,
         "g": 0,
         "b": 0 
-      },
+      }
   ]
 }
 ```
