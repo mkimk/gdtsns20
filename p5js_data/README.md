@@ -51,12 +51,12 @@ JSON can have more than one object, which can be nested like below:
 ```js
 var data = {
   myshape [
-      { shape: circle, //this is element 0
-        r: 200,
-        g: 200,
-        b: 200 
+      { shape: circle, 
+        r: 0,
+        g: 255,
+        b: 0 
       },
-      { shape: square, //this is eelement 1
+      { shape: square, 
           r: 255,
           g: 0,
           b: 0 
@@ -65,14 +65,13 @@ var data = {
 }
 ```
 
-* More read about the basic structure with a demo example is here[Code Lab Session 4: Ready, set, loop — jQuery](https://github.com/RISD-Code-Lab/cl-spring2020/tree/master/session-04)
-
 ### Data path
-We need to figure out a path to get into this JSON objects. Simplpy you can call by using dots. If the property name is an array, use the number of index we are looking for. 
+We need to figure out a path to get into this JSON objects. Simplpy you can call by using dots. 
+- Examples: `color.r` `fill(color.r, color.g, color.b);`
 
-`color.r`
-`fill(color.r, color.g, color.b);`
-`data.myshape[1].r`
+#### Accessing Array items
+If the property name is an array, use the number of index we are looking for. The order of an item in an array is called an index. Think of it as a numerical label. The position number starts at 0 (not 1.) 
+- Example: `data.myshape[1].r` 
 
 
 ### How to use JSON data in your p5.js project
@@ -159,11 +158,11 @@ Data is usually loaded as an external file or request it from an API. API stands
 ## How to use API
 
 ### Query String
-The question mark followed by the parameters and their values is referred to as the “query string". It assigns a parameter of data by querying a specific condition. In the query string, each parameter is listed one right after the other with an ampersand (`&`) separating them. The order of the query string parameters does not matter. You can see examples here: [Open Weather Map API calls](https://openweathermap.org/current)
+The question mark followed by the parameters and their values is referred to as the “query string". It assigns a parameter of data by querying a specific condition. In the query string, each parameter is listed one right after the other with an ampersand (`&`) separating them. The order of the query string parameters does not matter. You can see examples here 👉[Open Weather Map API calls](https://openweathermap.org/current)
 
 *To review JSON file on browser, [JSON formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en) plugin is useful.
 
-More read:
+More read 👉
 - [Query String](https://en.wikipedia.org/wiki/Query_string)
 - [Documenting APIs: Parameters](https://idratherbewriting.com/learnapidoc/docapis_doc_parameters.html#query_string_parameters)
 
@@ -174,10 +173,8 @@ More read:
 
 
 ## Other Resources
-- [Eloquent JavaScript: The Document Object Model](https://eloquentjavascript.net/14_dom.html)
-- [p5.js Reference > p5.Element](https://p5js.org/reference/#/p5.Element)
-- [Reference for All DOM Events](https://developer.mozilla.org/en-US/docs/Web/Events)
-- [Coding Train: 8: HTML / CSS / DOM](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6bI1SlcCRfLH79HZrFAtBvX)
+- [Code Lab Session 4: Ready, set, loop — jQuery](https://github.com/RISD-Code-Lab/cl-spring2020/tree/master/session-04) 
+- [Coding Train: 10: Working with Data](https://www.youtube.com/watch?v=rJaXOFfwGVw&list=PLRqwX-V7Uu6a-SQiI4RtIwuOrLJGnel0r&index=1)
 
 
 
