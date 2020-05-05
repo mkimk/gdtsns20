@@ -31,9 +31,11 @@ There are a few data formats that are standardized for computer to read.
 ### Other filetype 
 - text file, PDF, etc
 
-## How to use JSON in p5.js
 
-### Basic syntax
+
+## JSON 
+
+### Syntax
 
 Basic JSON file is a **string** like the following, with the quotations around the brackets.
 
@@ -81,9 +83,9 @@ If the property name is an array, use the number of index we are looking for. Th
 ```
 
 
-### How to use JSON data in your p5.js project
+## How to use JSON data in your p5.js project
 
-#### Internal
+### Internal
 If you have json string is short enough, you can directly implement JSON and use it by calling the strings.
 
 ```js
@@ -104,7 +106,7 @@ function draw() {
 }
 ```
 
-#### External
+### External
 However, JSON can be easily builky and complex to load a length of data. In this case, JSON can be loaded into your project as a stand alone file. The difference is, there is no variable in this file. It is just an object that starts with the curly brackets.  
 ```js
  {
@@ -115,7 +117,7 @@ However, JSON can be easily builky and complex to load a length of data. In this
 }
 ```
 
-##### Preload
+#### Preload
 Calling `loadJSON()` inside `preload()` guarantees to complete the operation before `setup()` and `draw()` are called.
 
 ```js
@@ -133,7 +135,7 @@ function draw() {
 }
 ```
 
-##### Callback
+#### Callback
 Besides of the preload, we can also use callback function. This is useful when you want to load the data over time. 
 
 Basic structure:
