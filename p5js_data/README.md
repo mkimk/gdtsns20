@@ -37,8 +37,8 @@ There are a few data formats that are standardized for computer to read.
 
 Basic JSON file is a **string** like the following, with the quotations around the brackets.
 
-```
-var color = {
+```js
+color = {
     "name" : "mycolor",
     "r": "255",
     "g": "0",
@@ -48,7 +48,7 @@ var color = {
 All property names have to be surrounded by double quotes, and only simple data expressions are allowed—no function calls, bindings, or anything that involves actual computation. Comments are not allowed in JSON.
 
 JSON can have more than one object, which can be nested like below:
-```
+```js
 var data = {
   myshape [
       { shape: circle, //this is element 0
@@ -78,7 +78,7 @@ We need to figure out a path to get into this JSON objects. Simplpy you can call
 ### How to use JSON data in your p5.js project
 If you have a few object data, you can directly implement JSON and use it by calling the strings.
 
-```
+```js
 var color;
 function setup() {
   createCanvas(200,200);
@@ -99,20 +99,21 @@ function draw() {
 
 ### Make a separate JSON
 However, JSON can be easily builky and complex to load a lenth of data. In this case, JSON can be loaded into your project as a stand alone file. The difference is, there is no variable in this file. It is just an object that starts with the curly brackets.  
-
+```js
  {
     "name" : "mycolor",
     "r": "255",
     "g": "0",
     "b": "0"
 }
+```
 
 ### Connect JSON to your p5.js
 
 #### Preload
 Calling `loadJSON()` inside `preload()` guarantees to complete the operation before setup() and draw() are called.
 
-```
+```js
 var color;
 function preload() {
   color = loadJSON("color.json");
@@ -130,7 +131,7 @@ function draw() {
 #### Callback
 Besides of the preload, we can also use callback function. This is useful when you want to load the data over time. Below example demonstrates how to load data in a custom function and call back the function in `draw()`.
 
-```
+```js
 var weatherData;
 function setup() {
     createCanvas(1200, 600);
