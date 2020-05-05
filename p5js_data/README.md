@@ -86,7 +86,7 @@ If the property name is an array, use the number of index we are looking for. Th
 ## How to use JSON data in your p5.js project
 
 ### Internal
-If you have json string is short enough, you can directly implement JSON and use it by calling the strings.
+If your JSON file is short enough, you can directly implement it into your JS file like below.
 
 ```js
 var color;
@@ -107,7 +107,7 @@ function draw() {
 ```
 
 ### External
-However, JSON can be easily builky and complex to load a length of data. In this case, JSON can be loaded into your project as a stand alone file. The difference is, there is no variable in this file. It is just an object that starts with the curly brackets.  
+JSON can be easily builky and complex to load a length of data. In this case, JSON can be loaded into your project as a stand alone file. The difference is, there is no variable in this file. It is just an object that starts with the curly brackets.  
 ```js
  {
     "name" : "mycolor",
