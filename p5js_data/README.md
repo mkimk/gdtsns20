@@ -42,9 +42,9 @@ Basic JSON file is a **string** like the following, with the quotations around t
 ```js
 {
     "name" : "mycolor",
-    "r": "255",
-    "g": "0",
-    "b": "0"
+    "r": 255,
+    "g": 0,
+    "b": 0
 }
 ```
 All property names have to be surrounded by double quotes, and only simple data expressions are allowed. No function calls, bindings, or anything that involves actual computation. Comments are not allowed in JSON.
@@ -111,9 +111,9 @@ JSON can be easily builky and complex to load a length of data. In this case, JS
 ```js
  {
     "name" : "mycolor",
-    "r": "255",
-    "g": "0",
-    "b": "0"
+    "r": 255,
+    "g": 0,
+    "b": 0
 }
 ```
 
