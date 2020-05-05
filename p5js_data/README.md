@@ -68,20 +68,21 @@ var data = {
 ### Data path
 To use JSON data for your project, we need to figure out a path to get into this JSON objects. In order to access any of the values, we will use dot notation that looks like below. The variable name is first, followed by a dot, followed by the key to be accessed.
 ```js
-  color.r
-  color.g
-  color.b
+  color.r //255
+  color.g //0
+  color.b //0
 ```
 
 #### Accessing Array items
 If the property name is an array, use the number of index we are looking for. The order of an item in an array is called an index. Think of it as a numerical label. The position number starts at 0 (not 1.). In JS, we can call that item in the array within the context of dot notation like below:
 ```js
-  data.myshape[0].r
-  data.myshape[1].shape
+  data.myshape[0].r //0
+  data.myshape[1].shape //square
 ```
 
 
 ### How to use JSON data in your p5.js project
+
 If you have json string is short enough, you can directly implement JSON and use it by calling the strings.
 
 ```js
@@ -102,8 +103,7 @@ function draw() {
 }
 ```
 
-
-### Make a separate JSON
+#### Make a separate JSON and connect it your p5.js
 However, JSON can be easily builky and complex to load a length of data. In this case, JSON can be loaded into your project as a stand alone file. The difference is, there is no variable in this file. It is just an object that starts with the curly brackets.  
 ```js
  {
@@ -113,8 +113,6 @@ However, JSON can be easily builky and complex to load a length of data. In this
     "b": "0"
 }
 ```
-
-### Connect JSON to your p5.js
 
 #### Preload
 Calling `loadJSON()` inside `preload()` guarantees to complete the operation before setup() and draw() are called.
