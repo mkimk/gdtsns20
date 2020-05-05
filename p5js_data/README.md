@@ -38,16 +38,16 @@ There are a few data formats that are standardized for computer to read.
 Basic JSON file is a **string** like the following, with the quotations around the brackets.
 
 ```js
-color = {
+var color = {
     "name" : "mycolor",
     "r": "255",
     "g": "0",
     "b": "0"
 }
 ```
-All property names have to be surrounded by double quotes, and only simple data expressions are allowed—no function calls, bindings, or anything that involves actual computation. Comments are not allowed in JSON.
+All property names have to be surrounded by double quotes, and only simple data expressions are allowed. No function calls, bindings, or anything that involves actual computation. Comments are not allowed in JSON.
 
-JSON can have more than one object, which can be nested like below:
+JSON can have more than one object, and also lets you create nested arrays.
 ```js
 var data = {
   myshape [
@@ -66,16 +66,23 @@ var data = {
 ```
 
 ### Data path
-We need to figure out a path to get into this JSON objects. Simplpy you can call by using dots. 
-- Examples: `color.r` `fill(color.r, color.g, color.b);`
+To use JSON data for your project, we need to figure out a path to get into this JSON objects. In order to access any of the values, we will use dot notation that looks like below. The variable name is first, followed by a dot, followed by the key to be accessed.
+```js
+  color.r
+  color.g
+  color.b
+```
 
 #### Accessing Array items
-If the property name is an array, use the number of index we are looking for. The order of an item in an array is called an index. Think of it as a numerical label. The position number starts at 0 (not 1.) 
-- Example: `data.myshape[1].r` 
+If the property name is an array, use the number of index we are looking for. The order of an item in an array is called an index. Think of it as a numerical label. The position number starts at 0 (not 1.). In JS, we can call that item in the array within the context of dot notation like below:
+```js
+  data.myshape[0].r
+  data.myshape[1].shape
+```
 
 
 ### How to use JSON data in your p5.js project
-If you have a few object data, you can directly implement JSON and use it by calling the strings.
+If you have json string is short enough, you can directly implement JSON and use it by calling the strings.
 
 ```js
 var color;
@@ -97,7 +104,7 @@ function draw() {
 
 
 ### Make a separate JSON
-However, JSON can be easily builky and complex to load a lenth of data. In this case, JSON can be loaded into your project as a stand alone file. The difference is, there is no variable in this file. It is just an object that starts with the curly brackets.  
+However, JSON can be easily builky and complex to load a length of data. In this case, JSON can be loaded into your project as a stand alone file. The difference is, there is no variable in this file. It is just an object that starts with the curly brackets.  
 ```js
  {
     "name" : "mycolor",
@@ -128,8 +135,25 @@ function draw() {
 ```
 
 #### Callback
-Besides of the preload, we can also use callback function. This is useful when you want to load the data over time. Below example demonstrates how to load data in a custom function and call back the function in `draw()`.
+Besides of the preload, we can also use callback function. This is useful when you want to load the data over time. 
 
+Basic structure:
+```js
+var weatherData;
+function setup () {
+  loadJSON("http://api.openweathermap.org/data/2.5/group?id=5224151,5128581,1723862&units=metric&appid=da41b776483f6b58fc0dc17d649e9ab1", gotData, 'jsonp'); 
+}
+function gotData(data){
+  weatherData = data;
+}
+function draw() {
+  if (weatherData) {
+    console.log(weatherData);
+  }
+}
+
+```
+Below example demonstrates how to load data in a custom function and call back the function in `draw()`.
 ```js
 var weatherData;
 function setup() {
